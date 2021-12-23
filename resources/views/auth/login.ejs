@@ -1,0 +1,38 @@
+<section class="login flex justify-center pt-24">
+
+    <div class="w-full max-w-xs">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="/login" method="POST">
+            <% if(messages.error) { %>
+                <span class="text-red-500 text-sm">
+                    <%= messages.error%>
+                </span>
+                <% } %>
+
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold text-sm mb-2" for="email">Email</label>
+                        <input id="email" name="email"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading:tight focus:outline-none focus:shadow-outline"
+                            type="email" placeholder="Enter your Email">
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-bold text-sm mb-2" for="password">Password</label>
+                        <input id="password" name="password"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading:tight focus:outline-none focus:shadow-outline mb-3"
+                            type="password" placeholder="***************">
+                        <!-- <p class="text-xs text-red-500 italic">Please choose a password.</p> -->
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <button
+                            class="btn-primary font-bold px-4 py-2 text-white rounded-full focus:outline-none focus:shadow-outline text-sm"
+                            type="submit">Log In</button>
+                        <a class="inline-block cursor-pointer align-baseline font-bold text-sm" href="/register">Don't
+                            have account?</a>
+                    </div>
+
+        </form>
+
+        <p class="text-center text-gray-400 text-xs">&copy;2021 www.github.com/mayures</p>
+    </div>
+</section>
